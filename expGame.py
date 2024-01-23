@@ -1,6 +1,7 @@
 import pygame
+
 pygame.init()
-screen = pygame.display.set_mode((500, 500)) # Setter skjermen til 500x500 piksler.
+screen = pygame.display.set_mode((800, 500)) # Setter skjermen til 500x500 piksler.
 clock = pygame.time.Clock()
 running = True
 
@@ -10,8 +11,9 @@ class Spiller:
         self.hp = self.max_hp
         self.x = screen.get_width() / 2
         self.y = screen.get_height() / 2
-        self.size = 15
-        self.color = 'green'
+        self.size = 25
+        self.color = 'darkolivegreen3'
+        self.movespeed = 5
         
     def draw(self):
         self.rect = pygame.Rect(self.x - self.size / 2, self.y - self.size / 2, self.size, self.size)
