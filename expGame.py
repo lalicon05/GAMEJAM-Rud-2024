@@ -4,7 +4,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 500)) # Setter skjermen til 500x500 piksler.
 clock = pygame.time.Clock()
 running = True
-
+#yes
 class Spiller:
     def __init__(self):
         self.max_hp = 3
