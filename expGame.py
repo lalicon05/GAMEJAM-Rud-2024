@@ -24,6 +24,16 @@ class Spiller:
         self.rect = pygame.Rect(self.x - self.size / 2, self.y - self.size / 2, self.size, self.size)
         pygame.draw.rect(screen, self.color, self.rect)
 
+#fonts og størrelse
+text_font_s = pygame.font.SysFont("Arial", 24) # liten tekst
+text_font_m = pygame.font.SysFont("Arial", 36) # Medium tekst
+text_font_l = pygame.font.SysFont("Arial", 48) # Stor tekst
+
+#Funksjon for å skrive tekst enklere
+def draw_text(text, font, text_col, x, y): #Funksjon som brukes for å lage tekst
+    img = font.render(text, True, text_col)
+    tekst_rect = img.get_rect(center=(x, y))
+    screen.blit(img, tekst_rect)
 
 #Lager objekter
 spiller = Spiller()
