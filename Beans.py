@@ -1,7 +1,3 @@
-#aksndjalsdaljsdkjsakjdkalksdk jwlijwpiajduepoifaudiwajuodpijusaoidjfeiundhefjakjoishianlkjjwgdhoijash
-print("ASDASDDFWDASD")
-
-
 """
 rough outline:
 
