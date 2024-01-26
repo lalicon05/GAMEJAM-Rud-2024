@@ -1,3 +1,4 @@
+#imports
 import pygame
 import math
 
@@ -23,6 +24,13 @@ class Spiller:
     def draw(self):
         self.rect = pygame.Rect(self.x - self.size / 2, self.y - self.size / 2, self.size, self.size)
         pygame.draw.rect(screen, self.color, self.rect)
+
+class Magic:
+    def __init__(self, x, y):
+        self.damage = 1
+        self.speed = 10
+        self.direction = [x, y]
+
 
 #fonts og størrelse til tekst
 text_font_s = pygame.font.SysFont("Arial", 24) # liten tekst
@@ -50,13 +58,13 @@ while running:
     spiller.retning = [0, 0]
 
     if(keys[pygame.K_d]) and((spiller.x) < screen.get_width()):
-        spiller.retning[0] = 1
+        spiller.retning[0] += 1
     if(keys[pygame.K_a]) and ((spiller.x) > 0): 
-        spiller.retning[0] = -1
+        spiller.retning[0] -= 1
     if(keys[pygame.K_s]) and((spiller.y) < screen.get_height()):
-        spiller.retning[1] = 1
+        spiller.retning[1] += 1
     if(keys[pygame.K_w]) and ((spiller.y) > 0): 
-        spiller.retning[1] = -1
+        spiller.retning[1] -= 1
 
 
     if(spiller.retning[0] != 0) and (spiller.retning[1] != 0):
